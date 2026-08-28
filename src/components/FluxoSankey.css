@@ -1,0 +1,285 @@
+/* =====================================================
+   SANKEY - ECOMETRIA
+===================================================== */
+
+.painel-sankey {
+  margin-bottom: 18px;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 9px;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho-sankey {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 25px;
+
+  margin-bottom: 20px;
+}
+
+.cabecalho-sankey h2 {
+  margin: 0;
+
+  color: var(--cor-verde-escuro);
+
+  font-family: var(--fonte-titulo);
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cabecalho-sankey p {
+  margin: 5px 0 0;
+
+  color: var(--cor-texto-secundario);
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   FILTRO
+===================================================== */
+
+.filtro-sankey {
+  min-width: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.filtro-sankey label {
+  color: var(--cor-texto-secundario);
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.filtro-sankey select {
+  width: 100%;
+  height: 38px;
+
+  padding: 0 10px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+
+  color: var(--cor-texto);
+
+  font-family: var(--fonte-interface);
+
+  font-size: 11px;
+
+  outline: none;
+}
+
+.filtro-sankey select:focus {
+  border-color: var(--cor-verde-oliva);
+}
+
+
+/* =====================================================
+   TÍTULOS DAS COLUNAS
+===================================================== */
+
+.titulos-sankey {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  padding: 10px 8% 6px;
+
+  color: var(--cor-texto-secundario);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.titulos-sankey span:nth-child(1) {
+  text-align: left;
+}
+
+.titulos-sankey span:nth-child(2) {
+  text-align: center;
+}
+
+.titulos-sankey span:nth-child(3) {
+  text-align: right;
+}
+
+
+/* =====================================================
+   ÁREA DO GRÁFICO
+===================================================== */
+
+.area-sankey {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #faf8f5;
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+}
+
+.grafico-sankey {
+  width: 100%;
+
+  min-width: 850px;
+
+  height: auto;
+
+  display: block;
+}
+
+
+/* =====================================================
+   FLUXOS
+===================================================== */
+
+.link-sankey {
+  transition:
+    stroke-opacity 0.15s ease;
+}
+
+.link-sankey:hover {
+  stroke-opacity: 0.8;
+}
+
+
+/* =====================================================
+   TEXTOS
+===================================================== */
+
+.texto-no-sankey {
+  fill: #2b2f24;
+
+  font-family: var(--fonte-interface);
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.subtexto-no-sankey {
+  fill: #777268;
+
+  font-family: var(--fonte-interface);
+
+  font-size: 9px;
+}
+
+.massa-no-sankey {
+  fill: #8a857d;
+
+  font-family: var(--fonte-interface);
+
+  font-size: 9px;
+
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   LEGENDA
+===================================================== */
+
+.legenda-sankey {
+  margin-top: 14px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.item-legenda-sankey {
+  min-height: 31px;
+
+  padding: 6px 9px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  background: #faf8f5;
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 20px;
+
+  color: var(--cor-texto-secundario);
+
+  font-size: 9px;
+}
+
+.item-legenda-sankey strong {
+  color: var(--cor-verde-escuro);
+
+  font-weight: 600;
+}
+
+.cor-legenda-sankey {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .cabecalho-sankey {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .filtro-sankey {
+    min-width: 0;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .painel-sankey {
+    padding: 18px;
+  }
+
+  .titulos-sankey {
+    display: none;
+  }
+
+}

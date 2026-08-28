@@ -1,0 +1,88 @@
+/* =====================================================
+   HEADER ECOMETRIA
+===================================================== */
+
+header.topbar.topbar-centralizada {
+  position: relative;
+
+  width: calc(100% - 32px);
+  height: 72px;
+
+  margin: 14px 16px 0;
+  padding: 0 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7f1e9 0%,
+      #ffffff 48%,
+      #f4f3ed 100%
+    );
+
+  border: 1px solid rgba(216, 199, 178, 0.9);
+
+  border-radius: 20px 20px 14px 14px;
+
+  box-shadow:
+    0 7px 20px rgba(43, 47, 36, 0.05);
+
+  overflow: hidden;
+}
+
+header.topbar.topbar-centralizada h2 {
+  position: relative;
+
+  margin: 0;
+  padding-bottom: 8px;
+
+  color: var(--cor-verde-escuro);
+
+  font-family: var(--fonte-titulo);
+
+  font-size: 21px;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+header.topbar.topbar-centralizada h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 42px;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: var(--cor-terracota);
+
+  border-radius: 20px;
+}
+
+/* SEM CÍRCULOS DECORATIVOS */
+
+header.topbar.topbar-centralizada::before,
+header.topbar.topbar-centralizada::after {
+  display: none;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+  header.topbar.topbar-centralizada {
+    width: calc(100% - 20px);
+
+    margin: 10px 10px 0;
+
+    border-radius: 15px 15px 10px 10px;
+  }
+}

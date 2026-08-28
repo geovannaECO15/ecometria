@@ -1,163 +1,121 @@
-function Inicio() {
-  const anoAtual = new Date().getFullYear();
+import armazenamentoOrganicos from "../assets/festa-junina/armazenamento-organicos.jpeg";
+import equipeLixoZero from "../assets/festa-junina/equipe-lixo-zero.jpeg";
+import estacoesSegregacao from "../assets/festa-junina/estacoes-segregacao.jpeg";
+import latinhasRecuperadas from "../assets/festa-junina/latinhas-recuperadas.jpeg";
+import rejeitosSegregados from "../assets/festa-junina/rejeitos-segregados.jpeg";
 
+import logoDmae from "../assets/festa-junina/logo-dmae.png";
+import logoEas from "../assets/festa-junina/logo-eas.jpg";
+import logoUfu from "../assets/festa-junina/logo-ufu.png";
+
+import FluxoSankey from "../components/FluxoSankey";
+
+import "./Inicio.css";
+
+function Inicio() {
   return (
     <div>
 
-      {/* =========================
-          APRESENTAÇÃO
-      ========================= */}
+      {/* HERO */}
 
-      <section className="inicio-apresentacao">
+      <section className="hero-ecometria">
 
-        <div className="inicio-apresentacao-conteudo">
+        <div className="hero-ecometria-conteudo">
 
-          <span className="inicio-etiqueta">
-            ECOMETRIA
-          </span>
+          <div className="hero-identificacao">
+            <span>ECOMETRIA</span>
+            <span className="hero-ponto">•</span>
+            <span>2026</span>
+          </div>
 
           <h1>
-            Rastreabilidade para uma economia mais circular
+            Rastreabilidade para uma
+            <br />
+            economia mais circular
           </h1>
-
-          <p>
-            A ECOMETRIA conecta informações sobre geração,
-            coleta, movimentação e destinação de resíduos,
-            contribuindo para o acompanhamento da recuperação
-            de materiais e da economia circular.
-          </p>
 
         </div>
 
-        <div className="inicio-ano">
 
-          <span>Ano de referência</span>
+        {/* ELEMENTO VISUAL */}
 
-          <strong>{anoAtual}</strong>
+        <div className="hero-ecometria-visual">
+
+          <div className="circulo circulo-externo"></div>
+
+          <div className="circulo circulo-interno"></div>
+
+          <div className="forma-terracota"></div>
+
+          <div className="forma-bege"></div>
+
+          <div className="linha-visual linha-visual-1"></div>
+
+          <div className="linha-visual linha-visual-2"></div>
+
+          <div className="hero-marca-central">
+
+            <span>ORIGEM</span>
+
+            <div></div>
+
+            <span>DESTINO</span>
+
+          </div>
 
         </div>
 
       </section>
 
 
-      {/* =========================
-          RESULTADOS GERAIS
-      ========================= */}
+      {/* ECOMETRIA EM NÚMEROS */}
 
       <section className="secao-inicio">
 
         <div className="cabecalho-secao-inicio">
 
-          <div>
-            <span className="inicio-etiqueta">
-              IMPACTO
-            </span>
+          <span className="inicio-etiqueta">
+            IMPACTO
+          </span>
 
-            <h2>
-              Resultados da ECOMETRIA
-            </h2>
+          <h2>ECOMETRIA em números</h2>
 
-            <p>
-              Indicadores consolidados de todas as operações
-              acompanhadas pela plataforma.
-            </p>
-          </div>
+          <p>
+            
+          </p>
 
         </div>
-
-
-        <div className="destaque-impacto-inicio">
-
-          <div>
-
-            <span>
-              Reciclagem em {anoAtual}
-            </span>
-
-            <h3>
-              A ECOMETRIA encaminhou --% dos resíduos
-              registrados para reciclagem.
-            </h3>
-
-            <p>
-              Esse indicador será calculado automaticamente
-              a partir das destinações registradas na plataforma.
-            </p>
-
-          </div>
-
-          <strong>
-            --%
-          </strong>
-
-        </div>
-
 
         <div className="grade-impacto-inicio">
 
           <div className="card-impacto-inicio">
             <span>Massa registrada</span>
-
-            <strong>-- kg</strong>
-
-            <p>
-              Total de materiais registrados na plataforma.
-            </p>
+            <strong>769 kg</strong>
           </div>
-
 
           <div className="card-impacto-inicio">
-            <span>Reciclagem</span>
-
-            <strong>--%</strong>
-
-            <p>
-              Materiais encaminhados para reciclagem.
-            </p>
+            <span>Recicláveis recuperados</span>
+            <strong>211 kg</strong>
           </div>
-
 
           <div className="card-impacto-inicio">
-            <span>Recuperação</span>
-
-            <strong>--%</strong>
-
-            <p>
-              Materiais recuperados por diferentes formas de destinação.
-            </p>
+            <span>Orgânicos compostados</span>
+            <strong>417 kg</strong>
           </div>
-
 
           <div className="card-impacto-inicio">
-            <span>Rastreabilidade</span>
-
-            <strong>--%</strong>
-
-            <p>
-              Registros com cadeia de rastreabilidade completa.
-            </p>
+            <span>Desvio do aterro</span>
+            <strong>82%</strong>
           </div>
-
 
           <div className="card-impacto-inicio">
             <span>Organizações</span>
-
-            <strong>--</strong>
-
-            <p>
-              Organizações participantes da ECOMETRIA.
-            </p>
+            <strong>1</strong>
           </div>
-
 
           <div className="card-impacto-inicio">
-            <span>Eventos registrados</span>
-
-            <strong>--</strong>
-
-            <p>
-              Eventos ambientais acompanhados pela plataforma.
-            </p>
+            <span>Operações</span>
+            <strong>1</strong>
           </div>
 
         </div>
@@ -165,153 +123,208 @@ function Inicio() {
       </section>
 
 
-      {/* =========================
-          MÍDIAS
-      ========================= */}
+      {/* FLUXO DE RASTREABILIDADE */}
+
+      <FluxoSankey />
+
+
+      {/* MÍDIAS E AÇÕES */}
 
       <section className="secao-inicio">
 
         <div className="cabecalho-secao-inicio">
 
-          <div>
-            <span className="inicio-etiqueta">
-              ECOMETRIA EM AÇÃO
-            </span>
+          <span className="inicio-etiqueta">
+            ECOMETRIA EM AÇÃO
+          </span>
 
-            <h2>
-              Mídias e ações
-            </h2>
+          <h2>Mídias e ações</h2>
 
-            <p>
-              Espaço para apresentar projetos, atividades de campo,
-              eventos, capacitações e ações desenvolvidas pela
-              ECOMETRIA e seus parceiros.
-            </p>
-          </div>
+          <p>
+            Registros da Festa Junina Lixo Zero 2026,
+            realizada na Paróquia São Pedro.
+          </p>
 
         </div>
 
 
-        <div className="grade-midias-inicio">
+        <div className="grade-midias-inicio grade-midias-cinco">
 
-          <div className="card-midia-inicio">
+          <article className="card-midia-inicio">
 
-            <div className="foto-placeholder-inicio">
-              Foto / mídia
-            </div>
+            <img
+              src={estacoesSegregacao}
+              alt="Estações de segregação da Festa Junina Lixo Zero"
+              className="foto-midia-inicio"
+            />
 
             <div className="conteudo-midia-inicio">
 
-              <span>Ação ECOMETRIA</span>
+              <span>SEGREGAÇÃO</span>
 
-              <h3>
-                Título da ação ou projeto
-              </h3>
+              <h3>Sistema de separação</h3>
 
               <p>
-                Uma breve descrição da atividade poderá
-                aparecer neste espaço.
+                Estrutura utilizada durante o evento.
               </p>
 
             </div>
 
-          </div>
+          </article>
 
 
-          <div className="card-midia-inicio">
+          <article className="card-midia-inicio">
 
-            <div className="foto-placeholder-inicio">
-              Foto / mídia
-            </div>
+            <img
+              src={equipeLixoZero}
+              alt="Equipe Lixo Zero durante a Festa Junina"
+              className="foto-midia-inicio"
+            />
 
             <div className="conteudo-midia-inicio">
 
-              <span>Projeto</span>
+              <span>EQUIPE</span>
 
-              <h3>
-                Título da atividade
-              </h3>
+              <h3>Equipe Lixo Zero</h3>
 
               <p>
-                Espaço reservado para fotografias e informações
-                das ações desenvolvidas.
+                Atuação durante a operação.
               </p>
 
             </div>
 
-          </div>
+          </article>
 
 
-          <div className="card-midia-inicio">
+          <article className="card-midia-inicio">
 
-            <div className="foto-placeholder-inicio">
-              Foto / mídia
-            </div>
+            <img
+              src={latinhasRecuperadas}
+              alt="Latinhas separadas durante a Festa Junina"
+              className="foto-midia-inicio"
+            />
 
             <div className="conteudo-midia-inicio">
 
-              <span>Evento</span>
+              <span>RECUPERAÇÃO</span>
 
-              <h3>
-                Título do evento
-              </h3>
+              <h3>Latinhas recuperadas</h3>
 
               <p>
-                A plataforma poderá divulgar resultados,
-                ações e iniciativas neste espaço.
+                Material segregado para recuperação.
               </p>
 
             </div>
 
-          </div>
+          </article>
+
+
+          <article className="card-midia-inicio">
+
+            <img
+              src={armazenamentoOrganicos}
+              alt="Armazenamento separado de resíduos orgânicos"
+              className="foto-midia-inicio"
+            />
+
+            <div className="conteudo-midia-inicio">
+
+              <span>ORGÂNICOS</span>
+
+              <h3>Armazenamento separado</h3>
+
+              <p>
+                Separação da fração orgânica.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article className="card-midia-inicio">
+
+            <img
+              src={rejeitosSegregados}
+              alt="Rejeitos segregados durante a operação"
+              className="foto-midia-inicio"
+            />
+
+            <div className="conteudo-midia-inicio">
+
+              <span>REJEITOS</span>
+
+              <h3>Rejeitos segregados</h3>
+
+              <p>
+                Fração separada durante a operação.
+              </p>
+
+            </div>
+
+          </article>
 
         </div>
 
       </section>
 
 
-      {/* =========================
-          PARCEIROS
-      ========================= */}
+      {/* PARCEIROS */}
 
       <section className="secao-inicio">
 
         <div className="cabecalho-secao-inicio">
 
-          <div>
-            <span className="inicio-etiqueta">
-              REDE ECOMETRIA
-            </span>
+          <span className="inicio-etiqueta">
+            REDE ECOMETRIA
+          </span>
 
-            <h2>
-              Parceiros
-            </h2>
-
-            <p>
-              Instituições e organizações que colaboram com
-              projetos, operações e ações da ECOMETRIA.
-            </p>
-          </div>
+          <h2>Parceiros</h2>
 
         </div>
 
 
         <div className="grade-parceiros-inicio">
 
-          <div className="parceiro-placeholder">
-            Logo do parceiro
+          <div className="card-parceiro-real">
+
+            <div className="area-logo-parceiro">
+
+              <img
+                src={logoUfu}
+                alt="Universidade Federal de Uberlândia"
+              />
+
+            </div>
+
           </div>
 
-          <div className="parceiro-placeholder">
-            Logo do parceiro
+
+          <div className="card-parceiro-real">
+
+            <div className="area-logo-parceiro">
+
+              <img
+                src={logoEas}
+                alt="Engenharia Ambiental e Sanitária UFU"
+              />
+
+            </div>
+
           </div>
 
-          <div className="parceiro-placeholder">
-            Logo do parceiro
-          </div>
 
-          <div className="parceiro-placeholder">
-            Logo do parceiro
+          <div className="card-parceiro-real">
+
+            <div className="area-logo-parceiro">
+
+              <img
+                src={logoDmae}
+                alt="DMAE"
+              />
+
+            </div>
+
           </div>
 
         </div>
@@ -319,9 +332,7 @@ function Inicio() {
       </section>
 
 
-      {/* =========================
-          CONTATO
-      ========================= */}
+      {/* CONTATO */}
 
       <section className="contato-inicio">
 
@@ -331,13 +342,10 @@ function Inicio() {
             CONTATO
           </span>
 
-          <h2>
-            Entre em contato com a ECOMETRIA
-          </h2>
+          <h2>ECOMETRIA</h2>
 
           <p>
-            Para informações sobre projetos, implantação,
-            parcerias ou utilização da plataforma.
+            Projetos, operações e parcerias.
           </p>
 
         </div>
@@ -356,8 +364,8 @@ function Inicio() {
           </div>
 
           <div>
-            <span>Instituição / Endereço</span>
-            <strong>--</strong>
+            <span>Localização</span>
+            <strong>Uberlândia / MG</strong>
           </div>
 
         </div>

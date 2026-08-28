@@ -1,0 +1,302 @@
+/* =====================================================
+   HERO ECOMETRIA
+===================================================== */
+
+.hero-ecometria {
+  position: relative;
+
+  min-height: 285px;
+
+  margin-bottom: 18px;
+
+  padding: 32px 42px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(260px, 0.65fr);
+
+  gap: 30px;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+}
+
+
+/* =====================================================
+   CONTEÚDO
+===================================================== */
+
+.hero-ecometria-conteudo {
+  position: relative;
+
+  z-index: 2;
+}
+
+.hero-identificacao {
+  margin-bottom: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--cor-terracota);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+}
+
+.hero-ponto {
+  color: var(--cor-bege);
+}
+
+.hero-ecometria h1 {
+  margin: 0 0 11px;
+
+  color: var(--cor-verde-escuro);
+
+  font-family: var(--fonte-titulo);
+
+  font-size: clamp(36px, 3.2vw, 52px);
+  font-weight: 600;
+
+  line-height: 1.04;
+
+  letter-spacing: -1.4px;
+}
+
+.hero-descricao {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: var(--cor-texto-secundario);
+
+  font-size: 12px;
+
+  line-height: 1.45;
+}
+
+
+/* =====================================================
+   FLUXO
+===================================================== */
+
+.hero-fluxo {
+  margin-top: 19px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.hero-fluxo div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.hero-fluxo div span {
+  color: var(--cor-terracota);
+
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.hero-fluxo div strong {
+  color: var(--cor-verde-escuro);
+
+  font-size: 10px;
+}
+
+.hero-seta {
+  color: var(--cor-bege);
+
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   ELEMENTO ABSTRATO
+===================================================== */
+
+.hero-ecometria-visual {
+  position: relative;
+
+  width: 100%;
+  height: 220px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.circulo {
+  position: absolute;
+
+  border-radius: 50%;
+}
+
+.circulo-externo {
+  width: 205px;
+  height: 205px;
+
+  border: 30px solid rgba(111, 122, 75, 0.13);
+}
+
+.circulo-interno {
+  width: 124px;
+  height: 124px;
+
+  border: 14px solid rgba(184, 95, 58, 0.14);
+}
+
+.forma-terracota {
+  position: absolute;
+
+  top: 10px;
+  right: 18px;
+
+  width: 92px;
+  height: 92px;
+
+  background: rgba(184, 95, 58, 0.12);
+
+  border-radius: 20px;
+
+  transform: rotate(22deg);
+}
+
+.forma-bege {
+  position: absolute;
+
+  bottom: 5px;
+  left: 15px;
+
+  width: 78px;
+  height: 78px;
+
+  background: rgba(216, 199, 178, 0.45);
+
+  border-radius: 50%;
+}
+
+.linha-visual {
+  position: absolute;
+
+  height: 1px;
+
+  background: rgba(43, 47, 36, 0.14);
+
+  transform-origin: center;
+}
+
+.linha-visual-1 {
+  width: 200px;
+
+  transform: rotate(28deg);
+}
+
+.linha-visual-2 {
+  width: 180px;
+
+  transform: rotate(-28deg);
+}
+
+.hero-marca-central {
+  position: relative;
+
+  z-index: 3;
+
+  width: 88px;
+  height: 88px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--cor-verde-escuro);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 14px 35px rgba(43, 47, 36, 0.13);
+}
+
+.hero-marca-central span {
+  color: #ffffff;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.hero-marca-central div {
+  width: 34px;
+  height: 1px;
+
+  margin: 6px 0;
+
+  background: var(--cor-terracota);
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .hero-ecometria {
+    grid-template-columns: 1fr;
+
+    padding: 30px;
+  }
+
+  .hero-ecometria-visual {
+    height: 190px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .hero-ecometria {
+    min-height: auto;
+
+    padding: 25px;
+  }
+
+  .hero-ecometria h1 {
+    font-size: 32px;
+  }
+
+  .hero-fluxo {
+    flex-wrap: wrap;
+  }
+
+  .hero-ecometria-visual {
+    display: none;
+  }
+
+}

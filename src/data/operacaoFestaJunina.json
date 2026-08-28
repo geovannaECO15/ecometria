@@ -1,0 +1,23 @@
+{
+  "id": "OP-001",
+  "nome": "Festa Junina Lixo Zero 2026",
+
+  "organizacaoGeradora": "Paróquia São Pedro",
+
+  "evento": {
+    "nome": "Festa Junina Lixo Zero 2026",
+    "local": "Paróquia São Pedro - Uberlândia/MG",
+    "ano": 2026
+  },
+
+  "transporte": {
+    "responsavel": "EcoRota Logística Ambiental",
+    "tipoDado": "Demonstrativo"
+  },
+
+  "destinacoes": [
+    "Compostagem municipal",
+    "Associações de catadores",
+    "Aterro Sanitário de Uberlândia"
+  ]
+}

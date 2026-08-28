@@ -1,0 +1,22 @@
+[
+  {
+    "tipoResiduo": "Orgânicos",
+    "massaKg": 417.567,
+    "destino": "Compostagem municipal"
+  },
+  {
+    "tipoResiduo": "Recicláveis",
+    "massaKg": 118.426,
+    "destino": "Associações de catadores"
+  },
+  {
+    "tipoResiduo": "Latinhas",
+    "massaKg": 93.049,
+    "destino": "Associações de catadores"
+  },
+  {
+    "tipoResiduo": "Rejeitos",
+    "massaKg": 139.958,
+    "destino": "Aterro Sanitário de Uberlândia"
+  }
+]

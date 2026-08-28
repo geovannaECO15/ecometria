@@ -1,32 +1,147 @@
+/* =====================================================
+   ECOMETRIA - IDENTIDADE VISUAL
+===================================================== */
+
 :root {
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  /* PALETA PRINCIPAL */
 
-  color: #333;
+  --cor-terracota-escuro: #7f2f24;
+  --cor-terracota: #b85f3a;
+  --cor-bege: #d8c7b2;
+  --cor-verde-oliva: #6f7a4b;
+  --cor-verde-escuro: #2b2f24;
 
-  background: #f4f6f7;
+  /* CORES DE USO */
+
+  --cor-primaria: #6f7a4b;
+  --cor-secundaria: #b85f3a;
+  --cor-destaque: #7f2f24;
+
+  --cor-fundo: #f6f3ee;
+  --cor-fundo-secundario: #ebe3d8;
+
+  --cor-card: #ffffff;
+
+  --cor-texto: #2b2f24;
+  --cor-texto-secundario: #6b6d63;
+
+  --cor-borda: #ded8cf;
+
+  /* FONTES */
+
+  --fonte-interface: "Inter", Arial, sans-serif;
+  --fonte-titulo: "Montserrat", Arial, sans-serif;
+
+  font-family: var(--fonte-interface);
+
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
 
   font-synthesis: none;
-
   text-rendering: optimizeLegibility;
 }
+
+
+/* =====================================================
+   BASE
+===================================================== */
 
 html,
 body,
 #root {
   margin: 0;
-
   padding: 0;
 
   width: 100%;
-
   min-width: 320px;
 
   min-height: 100vh;
 }
 
 body {
-  background: #f4f6f7;
+  background: var(--cor-fundo);
+
+  color: var(--cor-texto);
+
+  font-family: var(--fonte-interface);
+}
+
+
+/* =====================================================
+   TIPOGRAFIA
+===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fonte-titulo);
+
+  color: var(--cor-texto);
+
+  font-weight: 600;
+}
+
+p,
+span,
+label,
+input,
+select,
+textarea,
+button,
+table {
+  font-family: var(--fonte-interface);
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: inherit;
+}
+
+/* =====================================================
+   FOTOS REAIS - INÍCIO
+===================================================== */
+
+.foto-midia-inicio {
+  width: 100%;
+  height: 210px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.grade-midias-cinco {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+.grade-midias-cinco
+.card-midia-inicio:nth-child(4),
+.grade-midias-cinco
+.card-midia-inicio:nth-child(5) {
+  min-height: 100%;
+}
+
+@media (max-width: 1000px) {
+
+  .grade-midias-cinco {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .grade-midias-cinco {
+    grid-template-columns: 1fr;
+  }
+
 }
